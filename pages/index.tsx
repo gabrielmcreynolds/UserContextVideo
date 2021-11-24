@@ -29,7 +29,8 @@ const Home: NextPage = () => {
 
             <button className="mx-4 mt-4 px-4 py-2 border border-blue-400 rounded" onClick={() => {
                 const user: User = {name, email}
-                setUser(user)
+                setUser(user);
+                localStorage.setItem('user', JSON.stringify(user));
             }}>Set User
             </button>
         </>
